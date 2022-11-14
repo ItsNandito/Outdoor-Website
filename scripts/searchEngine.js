@@ -22,10 +22,25 @@ for (let i = 0; i < locationArrayLength; i++) {
 //for loop to fill in the drop down with its corresponding properties
 for (let i = 0; i < parkTypesArrayLength; i++) {
     let newOption = new Option(parkTypesArray[i], parkTypesArray[i])
-    const selectParkType = document.getElementById('parkType'); 
+    const selectParkType = document.getElementById('parkType');
     selectParkType.add(newOption,undefined);
 }
 
 
+//upon clicking search, it will retain the selected dropdown items
+const parkSearchbtn = document.getElementById('searchbtn');
 
-//upon clicking search, it will retain the selected dropdown items and use that to filter array
+
+parkSearchbtn.onclick = () => {
+    var locationData = document.getElementById('stateDropDown').value;
+    var parkTypeData = document.getElementById('parkType').value;
+    dataFilter(locationData, parkTypeData)
+
+    
+    
+}
+
+function dataFilter(location, parkType) {
+    console.log(location, parkType)
+}
+
