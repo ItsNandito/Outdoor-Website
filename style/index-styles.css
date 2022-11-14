@@ -9,9 +9,6 @@ h1 {
     margin-top: 2.5em;
 }
 
-
-
-
 .mainPgeBtn {
     font-size:15px;
     font-family:Arial;
@@ -26,9 +23,15 @@ h1 {
     border-bottom-left-radius:42px;
     border-bottom-right-radius:42px;
     background:linear-gradient(rgba(246, 240, 240, 1), rgba(248, 244, 236, 1));
+    margin: 5em;
   }
   
   .mainPgeBtn:hover {
     background: linear-gradient(rgba(248, 244, 236, 1), rgba(246, 240, 240, 1));
   }
+
+#btnDiv {
+    display: flex;
+    justify-content: center;
+}
                 

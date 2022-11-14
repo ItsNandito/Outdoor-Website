@@ -10,8 +10,12 @@
 <body>
     <main>
         <h1>Outdoor Adventures</h1>
-        <button class="mainPgeBtn">Search Parks</button>
-        <button class="mainPgeBtn"">More Info</button>
+
+        <div id="btnDiv"> <!--I have to do this to add css (centering buttons to html)-->
+            <button class="mainPgeBtn" onclick="window.location.href = 'http://127.0.0.1:5500/html-files/searchPage.html';">Search Parks</button>
+            <button class="mainPgeBtn" onclick="window.location.href = 'http://127.0.0.1:5500/html-files/infoPage.html';">More Info</button>
+        </div>
+
     </main>
 </body>
 </html>
