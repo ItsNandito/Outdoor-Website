@@ -1,0 +1,34 @@
+body {
+    background-image: url(/images/index-wallpaper.jpg);
+}
+
+h1 {
+    text-align: center;
+    font-size: 5em;
+    color: aliceblue;
+    margin-top: 2.5em;
+}
+
+
+
+
+.mainPgeBtn {
+    font-size:15px;
+    font-family:Arial;
+    width:134px;
+    height:39px;
+    border-width:1px;
+    color:rgba(0, 0, 0, 1);
+    border-color:rgba(255, 254, 254, 1);
+    font-weight:bold;
+    border-top-left-radius:42px;
+    border-top-right-radius:42px;
+    border-bottom-left-radius:42px;
+    border-bottom-right-radius:42px;
+    background:linear-gradient(rgba(246, 240, 240, 1), rgba(248, 244, 236, 1));
+  }
+  
+  .mainPgeBtn:hover {
+    background: linear-gradient(rgba(248, 244, 236, 1), rgba(246, 240, 240, 1));
+  }
+                
