@@ -1,0 +1,38 @@
+body {
+    background-image: url(/images/tempbgimage.jpg);
+    background-size: 100% 300%;
+    
+}
+
+form {
+
+    text-align: center;
+    margin-top: 8.5em; 
+}
+
+form, h1 {
+    font-size: 2em;
+    color: white;
+}
+
+.formbox {
+    
+    background: rgb(106,106,106);
+    background: linear-gradient(0deg, rgba(106,106,106,0.6138830532212884) 0%, rgba(180,180,180,0.6867121848739496) 56%, rgba(255,255,255,0.5494572829131652) 100%);
+
+}
+
+.formbox , select {
+    width: 9em;
+    height: 2.5em;
+    font-size: 18px;
+    text-align: center;
+    border-radius: 10em;
+}
+
+.formbox , button { 
+    width: 10em;
+    height: 3.5em;
+    border-radius: 10em;
+
+}
