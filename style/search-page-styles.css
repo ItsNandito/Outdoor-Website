@@ -1,19 +1,25 @@
 body {
     background-image: url(/images/tempbgimage.jpg);
-    background-size: 100% 300%;
-    background-repeat: repeat-y;
-    
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 form {
 
     text-align: center;
-    margin-top: 8.5em; 
+    margin-top: 15em; 
 }
 
-form, h1 {
-    font-size: 2em;
+form > h1 {
+    font-size: 4em;
     color: white;
+}
+
+#homeButton {
+    float: top;
+    position: fixed;
+    top: 350px;
 }
 
 .formbox {
@@ -39,18 +45,28 @@ form, h1 {
 }
 
 main {
-    background-color: rgba(229, 229, 229, 0.701);
-    display: flex;
-    flex-direction: column;
+    background: rgb(163,175,194);
+    background: linear-gradient(0deg, rgba(163,175,194,0.7063200280112045) 0%, rgba(255,231,193,0.5998774509803921) 52%, rgba(200,246,255,0.4990371148459384) 100%);
+    backdrop-filter: blur(1.8px);
+    margin-left: auto;
+    margin-right: auto;
+    width: 33.5em;
+    border-radius: .5em;
+    padding: .1em;
+    margin-top: 1em;
 
 }
 
 main > div {
+
+    backdrop-filter: blur(1px);
     text-align: center;
     border: 1px solid black;
     border-radius: .5em;
     margin-left: auto;
     margin-right: auto;
     margin-top: 1em;
+    margin-bottom: 1em;
     width: 30em;
+    background: rgba(255, 255, 255, 0.536);
 }

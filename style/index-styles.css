@@ -1,5 +1,7 @@
 body {
     background-image: url(/images/index-wallpaper.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 h1 {
@@ -28,6 +30,7 @@ h1 {
   
   .mainPgeBtn:hover {
     background: linear-gradient(rgba(248, 244, 236, 1), rgba(246, 240, 240, 1));
+
   }
 
 #btnDiv {
