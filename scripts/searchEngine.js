@@ -42,20 +42,27 @@ function dataFilter(location, parkType) {
     let filteredParkData = [];
     
     let stateFilterData = nationalParksArray.filter( item => item.State == location);
-    filteredParkData.push(stateFilterData);
-    console.log(filteredParkData);
+    console.log(stateFilterData)
 
-    let parkTypeFilterData = nationalParksArray.filter(item => item.LocationName.includes(parkType))
-    console.log(parkTypeFilterData)
 
+    //filteredParkData.push(stateFilterData);
+    //console.log(filteredParkData);
+
+    let parkTypeFilterData = stateFilterData.filter(item => item.LocationName.includes(parkType));
+    console.log(parkTypeFilterData);
+
+
+    //Im trying to use the updated array then filter by keyword---Im having issue with  it telling me its not a function
     // displaySearch(filteredParkData)
     // let parkTypeFilterData = filteredParkData.filter(item => item.LocationName.includes(parkType))
     // console.log(filteredParkData)
+
+    displaySearch(filteredParkData);
   }
 
   // This function will be used to display the data onto the HTML page
 function displaySearch(filteredParkData) {
-    console.log(filteredParkData) 
+    //console.log(filteredParkData) 
 }
 
 
