@@ -29,6 +29,8 @@ const parkSearchbtn = document.getElementById("searchbtn");
 
 // Clicking the button will retain whatever information is in the selected fields
 parkSearchbtn.onclick = () => {
+  let mainDiv = document.querySelector("main");
+  mainDiv.replaceChildren();
   var locationData = document.getElementById("stateDropDown").value;
   var parkTypeData = document.getElementById("parkType").value;
   dataFilter(locationData, parkTypeData); //it will then pass these values to the filter function
@@ -40,8 +42,7 @@ function dataFilter(location, parkType) {
   console.log(location, parkType);
 
   if (location == "blank" && parkType == "blank") {
-    alert("Can't leave fields blank")
-
+    alert("Can't leave fields blank");
   } else if (location == "blank" && parkType != "blank") {
     let parkTypeFilterData = nationalParksArray.filter((item) =>
       item.LocationName.includes(parkType)
@@ -73,4 +74,27 @@ function dataFilter(location, parkType) {
 function displaySearch(filteredData) {
   console.log(filteredData);
 
+  let mainDiv = document.querySelector("main");
+
+  filteredData.forEach((item) => {
+    let parkTitle = item.LocationName;
+    let parkAdress = `${item.Address}, ${item.City}, ${item.State}, ${item.ZipCode}`;
+    let parkPhone = `Phone: ${item.Phone} | Fax: ${item.Fax}`;
+
+    let cardTile = document.createElement("div");
+    mainDiv.appendChild(cardTile);
+
+    let cardTitle = document.createElement("h3");
+    cardTitle.innerHTML = parkTitle;
+
+    let cardAddress = document.createElement("h4");
+    cardAddress.innerHTML = parkAdress;
+
+    let cardPhone = document.createElement("h4");
+    cardPhone.innerHTML = parkPhone;
+
+    cardTile.appendChild(cardTitle);
+    cardTile.appendChild(cardAddress);
+    cardTile.appendChild(cardPhone);
+  });
 }
