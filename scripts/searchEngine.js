@@ -45,20 +45,17 @@ function dataFilter(location, parkType) {
     filteredParkData.push(stateFilterData);
     console.log(filteredParkData);
 
-    displaySearch(filteredParkData)
-    // let parkTypeFilterData = nationalParksArray.filter(item => item.LocationName == parkType)
-    // console.log(parkTypeFilterData)
+    let parkTypeFilterData = nationalParksArray.filter(item => item.LocationName.includes(parkType))
+    console.log(parkTypeFilterData)
+
+    // displaySearch(filteredParkData)
+    // let parkTypeFilterData = filteredParkData.filter(item => item.LocationName.includes(parkType))
+    // console.log(filteredParkData)
   }
 
+  // This function will be used to display the data onto the HTML page
 function displaySearch(filteredParkData) {
-    console.log(filteredParkData)
-
-    let newDiv = document.createElement('div')
-    newDiv.style.background = "white"
-    
-
-
-    
+    console.log(filteredParkData) 
 }
 
 
