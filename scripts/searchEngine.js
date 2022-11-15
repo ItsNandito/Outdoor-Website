@@ -35,27 +35,18 @@ parkSearchbtn.onclick = () => {
 };
 
 //using the keywords that were selected, we will use that to filter the nationalParkData array
+//some key things to keep an eye for is if uses leaves a dropdown blank. (perhaps use if else statements)
 function dataFilter(location, parkType) {
 
     console.log(location, parkType);
 
-    let filteredParkData = [];
-    
+    //This will filter data by state
     let stateFilterData = nationalParksArray.filter( item => item.State == location);
     console.log(stateFilterData)
 
-
-    //filteredParkData.push(stateFilterData);
-    //console.log(filteredParkData);
-
+    //This will transfer the data that was used in the line above and filter it down one more time
     let parkTypeFilterData = stateFilterData.filter(item => item.LocationName.includes(parkType));
     console.log(parkTypeFilterData);
-
-
-    //Im trying to use the updated array then filter by keyword---Im having issue with  it telling me its not a function
-    // displaySearch(filteredParkData)
-    // let parkTypeFilterData = filteredParkData.filter(item => item.LocationName.includes(parkType))
-    // console.log(filteredParkData)
 
     displaySearch(filteredParkData);
   }
