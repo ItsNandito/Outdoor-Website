@@ -41,40 +41,36 @@ function dataFilter(location, parkType) {
 
   if (location == "blank" && parkType == "blank") {
     alert("Can't leave fields blank")
+
   } else if (location == "blank" && parkType != "blank") {
     let parkTypeFilterData = nationalParksArray.filter((item) =>
       item.LocationName.includes(parkType)
     );
-    //console.log(parkTypeFilterData);
+
     displaySearch(parkTypeFilterData);
   } else if (parkType == "blank" && location != "blank") {
     let stateFilterData = nationalParksArray.filter(
       (item) => item.State == location
     );
-    //console.log(stateFilterData)
+
     displaySearch(stateFilterData);
   } else {
     //This will filter data by state
     let stateFilterData = nationalParksArray.filter(
       (item) => item.State == location
     );
-    //console.log(stateFilterData)
 
     //This will transfer the data that was used in the line above and filter it down one more time
     let parkTypeFilterData = stateFilterData.filter((item) =>
       item.LocationName.includes(parkType)
     );
-    //console.log(parkTypeFilterData);
 
     displaySearch(parkTypeFilterData);
   }
 }
 
 // This function will be used to display the data onto the HTML page
-function displaySearch(filteredParkData) {
-  console.log(filteredParkData);
-}
+function displaySearch(filteredData) {
+  console.log(filteredData);
 
-function userError() {
-  alert("Sorry Please Try Again");
 }
