@@ -1,0 +1,55 @@
+select, option {
+    width: 200px;
+    height: 30px;
+    border-radius: .5em;
+    font-size: 1em;
+    text-align: center;
+    margin-left: 5em;
+}
+select{
+    margin-bottom: 26em;
+    margin-right: 5em;
+}
+main {
+    display: flex;
+    border: 1px solid black;
+}
+.dropdown {
+    border: 1px solid black;
+    margin: auto;
+    
+}
+.canvas {
+
+    margin-right: 15em;
+    border: 1px solid black;
+    border-radius: .3em;
+    display: flex;
+
+}
+
+.imageA{
+    
+    border: 1px solid black;
+    margin: auto;
+    background-color: lightslategray;
+    height: 30em;
+
+}
+
+
+img {
+    margin-top: 7.5em;
+    margin-left: 2em;
+    margin-right: 2em;
+    border-radius: .2em;
+    border: .5px solid black;
+}
+
+
+.description {
+
+    width: 25em;
+    border: 1px solid black;
+    text-align: center;
+}
