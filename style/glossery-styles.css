@@ -6,6 +6,13 @@ select, option {
     text-align: center;
     margin-left: 5em;
 }
+
+body {
+    background-image: url(/images/mountainbg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 select{
     margin-bottom: 26em;
     margin-right: 5em;
@@ -17,6 +24,10 @@ main {
 .dropdown {
     border: 1px solid black;
     margin: auto;
+    color: aliceblue;
+    text-align: center;
+    background-color: rgb(182, 182, 182);
+    height: 36em;
     
 }
 .canvas {
@@ -33,13 +44,13 @@ main {
     border: 1px solid black;
     margin: auto;
     background-color: lightslategray;
-    height: 30em;
+    height: 36em;
 
 }
 
 
 img {
-    margin-top: 7.5em;
+    margin-top: 10em;
     margin-left: 2em;
     margin-right: 2em;
     border-radius: .2em;
@@ -52,4 +63,5 @@ img {
     width: 25em;
     border: 1px solid black;
     text-align: center;
+    background-color: aliceblue;
 }
