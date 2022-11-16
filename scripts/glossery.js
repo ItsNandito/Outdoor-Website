@@ -12,25 +12,55 @@ for (let i = 0; i < mountainsArrayLength; i++) {
 let dropDown = document.getElementById('mountainSelection');
 
 dropDown.onchange = () => {
+    let descriptionCard = document.getElementById('description');
+    descriptionCard.replaceChildren()
     let dropDownValue = dropDown.value;
     console.log(dropDownValue);
-    arraySelector(dropDownValue)
+    indexFinder(dropDownValue)
     //cardUpdater(mountain);
 };
 
 //perhaps use indexof to locate the name name and what index its in and push that to our cardudpater function
-function arraySelector(mountain) {
+//Ended up using the findIndex method to located the index that matches the dropdown value
+function indexFinder(mountainName) {
     let arrayindex = mountainsArray.findIndex(array => {
         //console.log(array.name == mountain);
-        return array.name == mountain
+        return array.name == mountainName
     })
 
-    console.log(arrayindex)
-
-
+    cardUpdater(arrayindex)
 }
 
-function cardUpdater(mountain) {
-    let canvas =  document.getElementById('canvas');
-    let mtnName = mountainsArray.name
+//I will be using the index value to navigate through the array and display them on the html page
+function cardUpdater(newIndex) {
+    let  index = newIndex;
+    let imgsrc = document.getElementById('imgsrc')
+    imgsrc.src = (`/images/${mountainsArray[index].img}`);
+
+    let descriptionCard = document.getElementById('description')
+    let mtnName = mountainsArray[index].name;
+    console.log(mtnName)
+    let mtndescription = mountainsArray[index].desc;
+    console.log(mtndescription)
+    let mtnelevation = mountainsArray[index].elevation;
+    console.log(mtnelevation)
+    let mtncoordinates = (`${mountainsArray[index].coords.lat}, ${mountainsArray[index].coords.lng}`);
+    console.log(mtncoordinates)
+
+    let cardTitle = document.createElement("h2");
+    cardTitle.innerHTML = mtnName;
+    descriptionCard.appendChild(cardTitle)
+
+    let elevation = document.createElement("h5");
+    elevation.innerHTML = mtnelevation;
+    descriptionCard.appendChild(elevation)
+
+    let description = document.createElement("p");
+    description.innerHTML = mtndescription;
+    descriptionCard.appendChild(description)
+
+    let coordinates = document.createElement("h5");
+    coordinates.innerHTML = mtncoordinates;
+    descriptionCard.appendChild(coordinates)
+
 }
