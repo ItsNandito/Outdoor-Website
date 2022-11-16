@@ -34,7 +34,6 @@ parkSearchbtn.onclick = () => {
 
   if (locationData == "blank" && parkTypeData == "blank") {
     alert("Can't leave fields blank");
-
   } else {
     let mainDiv = document.querySelector("main");
     let pageTitle = document.querySelector("form");
@@ -81,37 +80,33 @@ function displaySearch(filteredData) {
   console.log(filteredData);
   let mainDiv = document.querySelector("main");
 
-  if(filteredData.length === 0){
+  if (filteredData.length === 0) {
     let cardTile = document.createElement("div");
     mainDiv.appendChild(cardTile);
     let cardTitle = document.createElement("h3");
     cardTitle.innerHTML = "No results";
     cardTile.appendChild(cardTitle);
-  }
-
-  else {
+  } else {
     filteredData.forEach((item) => {
       let parkTitle = item.LocationName;
       let parkAdress = `${item.Address}, ${item.City}, ${item.State}, ${item.ZipCode}`;
       let parkPhone = `Phone: ${item.Phone} | Fax: ${item.Fax}`;
-  
+
       let cardTile = document.createElement("div");
       mainDiv.appendChild(cardTile);
-  
+
       let cardTitle = document.createElement("h3");
       cardTitle.innerHTML = parkTitle;
-  
+
       let cardAddress = document.createElement("h4");
       cardAddress.innerHTML = parkAdress;
-  
+
       let cardPhone = document.createElement("h4");
       cardPhone.innerHTML = parkPhone;
-  
+
       cardTile.appendChild(cardTitle);
       cardTile.appendChild(cardAddress);
       cardTile.appendChild(cardPhone);
     });
-
   }
-  
 }

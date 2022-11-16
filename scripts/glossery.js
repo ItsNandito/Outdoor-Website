@@ -42,14 +42,17 @@ function cardUpdater(newIndex) {
     console.log(mtnName)
     let mtndescription = mountainsArray[index].desc;
     console.log(mtndescription)
-    let mtnelevation = mountainsArray[index].elevation;
+    let mtnelevation = (`Elevation: ${mountainsArray[index].elevation} FT`);
     console.log(mtnelevation)
-    let mtncoordinates = (`${mountainsArray[index].coords.lat}, ${mountainsArray[index].coords.lng}`);
+    let mtncoordinates = (`Lat: ${mountainsArray[index].coords.lat}, Long: ${mountainsArray[index].coords.lng}`);
     console.log(mtncoordinates)
 
     let cardTitle = document.createElement("h2");
     cardTitle.innerHTML = mtnName;
     descriptionCard.appendChild(cardTitle)
+
+    // let linebrk = document.createElement('hr');
+    // descriptionCard.appendChild(linebrk)
 
     let elevation = document.createElement("h5");
     elevation.innerHTML = mtnelevation;

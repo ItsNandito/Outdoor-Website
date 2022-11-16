@@ -12,39 +12,47 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 }
-
+ header > h1 {
+    text-align: center;
+    color: white;
+ }
 select{
     margin-bottom: 26em;
     margin-right: 5em;
 }
 main {
     display: flex;
-    border: 1px solid black;
+    margin-top: 5.5em;
+
 }
 .dropdown {
     border: 1px solid black;
+    border-radius: 1em;
+    backdrop-filter: blur(1.8px);
     margin: auto;
     color: aliceblue;
     text-align: center;
-    background-color: rgb(182, 182, 182);
-    height: 36em;
+    background-color: rgba(182, 182, 182, 0.576);
+    height: 38em;
     
 }
 .canvas {
 
     margin-right: 15em;
     border: 1px solid black;
-    border-radius: .3em;
+    border-radius: 1em;
     display: flex;
 
 }
 
 .imageA{
     
-    border: 1px solid black;
+    /* border: 1px solid black; */
     margin: auto;
-    background-color: lightslategray;
-    height: 36em;
+    border-radius: 1em 0 0 1em;
+    background-color: rgba(119, 136, 153, 0.574);
+    backdrop-filter: blur(1.8px);
+    height: 38em;
 
 }
 
@@ -53,7 +61,7 @@ img {
     margin-top: 10em;
     margin-left: 2em;
     margin-right: 2em;
-    border-radius: .2em;
+    border-radius: 1em;
     border: .5px solid black;
 }
 
@@ -61,7 +69,37 @@ img {
 .description {
 
     width: 25em;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     text-align: center;
-    background-color: aliceblue;
+    background-color: rgba(240, 248, 255, 0.852);
+    backdrop-filter: blur(1.8px);
+    border-radius: 0 1em 1em 0;
+    font-size: 20px;
 }
+
+.description > h2 {
+    font-weight: 900;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.description > p {
+    margin-bottom: 10em;
+    padding: 1em;
+}
+
+#homeButton {
+    float: top;
+    position: fixed;
+    top: 125px;
+}
+
+#mtnButton {
+    float: top;
+    position: fixed;
+    top: 250px;
+}
+
+
+
+
