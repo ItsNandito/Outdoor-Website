@@ -14,14 +14,14 @@ let parkTypesArrayLength = parkTypesArray.length;
 for (let i = 0; i < locationArrayLength; i++) {
   let newOption = new Option(locationsArray[i], locationsArray[i]);
   const selectState = document.getElementById("stateDropDown");
-  selectState.add(newOption, undefined);
+  selectState.add(newOption);
 }
 
 //for loop to fill in the drop down with its corresponding properties
 for (let i = 0; i < parkTypesArrayLength; i++) {
   let newOption = new Option(parkTypesArray[i], parkTypesArray[i]);
   const selectParkType = document.getElementById("parkType");
-  selectParkType.add(newOption, undefined);
+  selectParkType.add(newOption);
 }
 
 //upon clicking search, it will retain the selected dropdown items

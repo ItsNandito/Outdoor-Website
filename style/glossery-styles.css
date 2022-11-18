@@ -16,6 +16,7 @@ body {
     text-align: center;
     color: white;
     font-size: 3.5em;
+    text-shadow: 2.5px 1px black;
  }
 select{
     margin-bottom: 26em;
@@ -35,6 +36,7 @@ main {
     text-align: center;
     background-color: rgba(182, 182, 182, 0.576);
     height: 38em;
+    box-shadow: 5px 4px rgba(0, 0, 0, 0.678);
     
 }
 .canvas {
@@ -43,6 +45,7 @@ main {
     border: 1px solid black;
     border-radius: 1em;
     display: flex;
+    box-shadow: 5px 4px rgba(0, 0, 0, 0.678);
 
 }
 
@@ -72,7 +75,7 @@ img {
     width: 25em;
     /* border: 1px solid black; */
     text-align: center;
-    background-color: rgba(240, 248, 255, 0.852);
+    background-color: rgba(240, 248, 255, 0.759);
     backdrop-filter: blur(1.8px);
     border-radius: 0 1em 1em 0;
     font-size: 20px;
