@@ -39,13 +39,9 @@ function cardUpdater(newIndex) {
 
     let descriptionCard = document.getElementById('description')
     let mtnName = mountainsArray[index].name;
-    console.log(mtnName)
     let mtndescription = mountainsArray[index].desc;
-    console.log(mtndescription)
     let mtnelevation = (`Elevation: ${mountainsArray[index].elevation} FT`);
-    console.log(mtnelevation)
     let mtncoordinates = (`Lat: ${mountainsArray[index].coords.lat}, Long: ${mountainsArray[index].coords.lng}`);
-    console.log(mtncoordinates)
 
     let cardTitle = document.createElement("h2");
     cardTitle.innerHTML = mtnName;

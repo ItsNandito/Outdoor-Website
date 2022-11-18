@@ -60,9 +60,9 @@ showAll.onchange = () => {
 };
 
 searchEnabled.onchange = () => {
-  if (searchEnabled.checked){
+  if (searchEnabled.checked){ //we are checking to see if the checkbox for searchbox has been selected
 
-    locationData.style.visibility='hidden' ;
+    locationData.style.visibility='hidden' ; //making our dropdowns invisible
     parkTypeData.style.visibility='hidden' ;
     parkSearchbtn.disabled = false;
     showAll.disabled = true;
