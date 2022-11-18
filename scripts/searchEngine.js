@@ -27,29 +27,82 @@ for (let i = 0; i < parkTypesArrayLength; i++) {
 //upon clicking search, it will retain the selected dropdown items
 const parkSearchbtn = document.getElementById("searchbtn");
 
-//when Show all is selected, dropdowns get disabled
+var locationData = document.getElementById("stateDropDown");
+var parkTypeData = document.getElementById("parkType");
+
+//when Show all is selected, dropdowns & search btn get disabled
 let showAll = document.getElementById('showAll');
 
+//BETA Search box
+let searchEnabled = document.getElementById('search');
+
+
+
+//this onchange event will disable and enable my dropdowns and button
 showAll.onchange = () => {
-
-  var locationData = document.getElementById("stateDropDown");
-  var parkTypeData = document.getElementById("parkType");
-
   if (showAll.checked){
-    console.log(showAll)
     locationData.disabled = true;
     parkTypeData.disabled = true;
     parkSearchbtn.disabled = true;
+    let pageTitle = document.querySelector("form");
+    pageTitle.style.marginTop = "0em";
     let fullArray = nationalParksArray;
     displaySearch(fullArray)
   }else{
     locationData.disabled = false;
     parkTypeData.disabled = false;
     parkSearchbtn.disabled = false;
+    let pageTitle = document.querySelector("form");
+    pageTitle.style.marginTop = "15em";
     let mainDiv = document.querySelector("main");
     mainDiv.replaceChildren();
   }
 };
+
+searchEnabled.onchange = () => {
+  if (searchEnabled.checked){
+
+    locationData.style.visibility='hidden' ;
+    parkTypeData.style.visibility='hidden' ;
+    parkSearchbtn.disabled = false;
+    showAll.disabled = true;
+
+    parkSearchbtn.style.borderRadius = "0 10em 10em 0";
+
+    let searchBox = document.createElement("input");
+    let form = document.getElementById('formBox');
+    searchBox.setAttribute('type', "text");
+    searchBox.setAttribute('id', "searchbox");
+    form.prepend(searchBox);
+    searchData();
+    
+
+  }else{
+    locationData.disabled = false;
+    parkTypeData.disabled = false;
+    parkSearchbtn.disabled = false;
+    showAll.disabled = false;
+    window.location.reload();
+  }
+};
+
+function searchData(){
+  parkSearchbtn.onclick = () => {
+    let searchBoxData = document.getElementById('searchbox').value;
+    let mainDiv = document.querySelector('main');
+    mainDiv.replaceChildren();
+    searchFilter(searchBoxData);
+  }
+  return
+}
+
+function searchFilter(searchData) {
+  
+  let parkTypeFilterData = nationalParksArray.filter(
+    (item) => item.LocationName.toLowerCase().includes(searchData)
+  );
+  displaySearch(parkTypeFilterData);
+}
 
 
 // Clicking the button will retain whatever information is in the selected fields

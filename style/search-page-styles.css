@@ -16,6 +16,19 @@ form > h1 {
     color: white;
 }
 
+#searchbox {
+    position: fixed;
+    top: 26.85em;
+    right: 64.45em;
+    width: 25em;
+    height: 3em;
+    border-radius: 1em 0 0 1em;
+}
+
+#searchbox [type='text']{
+    font-size: 24px;
+}
+
 #homeButton {
     float: top;
     position: fixed;
