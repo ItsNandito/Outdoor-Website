@@ -15,6 +15,7 @@ body {
  header > h1 {
     text-align: center;
     color: white;
+    font-size: 3.5em;
  }
 select{
     margin-bottom: 26em;
@@ -91,13 +92,13 @@ img {
 #homeButton {
     float: top;
     position: fixed;
-    top: 125px;
+    top: 175px;
 }
 
 #mtnButton {
     float: top;
     position: fixed;
-    top: 250px;
+    top: 300px;
 }
 
 

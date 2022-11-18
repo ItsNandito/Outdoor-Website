@@ -27,6 +27,31 @@ for (let i = 0; i < parkTypesArrayLength; i++) {
 //upon clicking search, it will retain the selected dropdown items
 const parkSearchbtn = document.getElementById("searchbtn");
 
+//when Show all is selected, dropdowns get disabled
+let showAll = document.getElementById('showAll');
+
+showAll.onchange = () => {
+
+  var locationData = document.getElementById("stateDropDown");
+  var parkTypeData = document.getElementById("parkType");
+
+  if (showAll.checked){
+    console.log(showAll)
+    locationData.disabled = true;
+    parkTypeData.disabled = true;
+    parkSearchbtn.disabled = true;
+    let fullArray = nationalParksArray;
+    displaySearch(fullArray)
+  }else{
+    locationData.disabled = false;
+    parkTypeData.disabled = false;
+    parkSearchbtn.disabled = false;
+    let mainDiv = document.querySelector("main");
+    mainDiv.replaceChildren();
+  }
+};
+
+
 // Clicking the button will retain whatever information is in the selected fields
 parkSearchbtn.onclick = () => {
   var locationData = document.getElementById("stateDropDown").value;
@@ -65,6 +90,8 @@ function dataFilter(location, parkType) {
     let stateFilterData = nationalParksArray.filter(
       (item) => item.State == location
     );
+
+    console.log(stateFilterData);
 
     //This will transfer the data that was used in the line above and filter it down one more time
     let parkTypeFilterData = stateFilterData.filter((item) =>

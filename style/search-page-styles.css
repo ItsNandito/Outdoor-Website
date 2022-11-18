@@ -28,6 +28,10 @@ form > h1 {
     top: 450px;
 }
 
+#showAll {
+    margin: 1em;
+}
+
 .formbox {
     
     background: rgb(106,106,106);
